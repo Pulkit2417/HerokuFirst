@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>House Price Prediction</title>
+</head>
+<body>
+    <h1>House Price Prediction via Linear Regression</h1>
+    <form action="{{url_for('predict')}}" method="post">
+        <input type="text" name="area" placeholder="Enter Area: ">Total Area</input><br><br>
+
+        <label for="bedrooms">Bedrooms</label><br>
+        <select name="bedrooms" id="bedrooms">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <label for="bathrooms">Bathrooms</label><br>
+        <select name="bathrooms" id="bathrooms">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <label for="stories">Stories</label><br>
+        <select name="stories" id="stories">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select><br><br>
+
+        <label for="airconditioning">AC</label><br>
+        <select name="airconditioning" id="airconditioning">
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select><br><br>
+
+        <label for="parking">Parking</label><br>
+        <select name="parking" id="parking">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="0">0</option>
+        </select><br><br>
+
+        <label for="prefarea">Pref Area</label><br>
+        <select name="prefarea" id="prefarea">
+            <option value="1">yes</option>
+            <option value="0">no</option>
+        </select><br><br>
+
+        <label for="furnishingstatus">Furnishing Status</label><br>
+        <select name="furnishingstatus" id="furnishingstatus">
+            <option value="2">Furnished</option>
+            <option value="1">Semi-furnished</option>
+            <option value="0">Unfurnished</option>
+        </select><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <h3><br>{{prediction_text}}</h3>
+</body>
+</html>
